@@ -13,10 +13,26 @@
             background-repeat: repeat;
         }
         
-        .huver:hover{
-            border: 2.5px solid white;
-            border-radius: 2px;
-            /* padding: .45rem .95rem; */
+        @media screen and (max-width: 600px){
+
+            .huver:hover{
+                background: #3a3a3a;
+                /* opacity: 80%; */
+            }
+
+            .mobile-bg{
+                background: #3a3a3a;
+            }
+
+        }
+
+        @media screen and (min-width: 600px){
+
+            .huver:hover{
+                border: 1px solid white;
+                border-radius: 2px;
+            }
+
         }
 
         @import url("assets/impact.ttf");
@@ -29,7 +45,7 @@
 </head>
 <body class="">
 
-    <section class="fixed flex justify-between md:items-center w-full px-8 md:px-0">
+    <section class="fixed flex justify-between md:items-center w-full">
         <div class="py-2 p-3 md:p-4 lg:p-8">
             <img src="./assets/images/logo-new-vector.png" class="w-20 md:w-32 lg:w-36">
         </div>
@@ -39,11 +55,12 @@
             
         </div>
         
-        <div id="menu" class=" md:flex text-white p-2 md:block  hidden fixed h-screen md:h-auto md:relative text-center md:text-left bg-black transition duration-500 bg-opacity-75 md:bg-transparent w-full md:w-auto">
+        <div id="menu" class="md:flex text-white p-2 md:block
+        hidden fixed h-screen md:h-auto md:relative text-center md:text-left bg-black transition duration-500 bg-opacity-75 md:bg-transparent w-full md:w-auto">
             
-            <a href="./sport.html"  class="px-4 mx-2 py-2 huver block">Home</a>
+            <a href="./index.html"  class="px-4 mx-2 py-2 huver block">Home</a>
 
-            <a href="./about.html" class="px-4 mx-2 py-2 border-2 border-white block huver">About us</a>
+            <a href="./about.html" class="px-4 mx-2 py-2 mobile-bg md:border-2 md:border-white block huver">About us</a>
 
             <a href="./get-started.html" class="px-4 mx-2 py-2 block huver">Get Scouted</a>
 
@@ -51,8 +68,9 @@
 
             <a href="./contact.html" class="px-4 mx-2 py-2 block huver">Contact us</a>
 
-            <img src="./assets/images/close-icon.svg" alt="" id="closeBtn" class="w-8 hidden md:hidden">
-
+            <div class="flex justify-center w-full">
+                <img src="./assets/images/close-icon.svg" alt="" id="closeBtn" class="hidden md:hidden" width="35px">
+            </div>
         </div>
     </section>
 
@@ -62,17 +80,17 @@
                 <img src="./assets/images/logo-new-vector.png " class="w-40 md:w-40 lg:w-56">
             </div>
 
-            <div class="text-center text-4xl md:text-4xl text-white lg:text-6xl lg:text-center">
+            <div class="text-center impact text-4xl md:text-4xl text-white lg:text-6xl lg:text-center">
                 Route One Sports Management
             </div>
         </div>
     </section>
 
     <section class="px-4 md:px-6 max-w-4xl mx-auto py-6 border-b-2 border-gray-200">
-        <div class="md:px-0 px-8 flex justify-center">
+        <div class="flex justify-center">
             <div class="align-center justify-center items-center">
                 <h1
-                class="md:text-5xl text-3xl my-4 text-center font-bold">
+                class="md:text-5xl impact text-3xl my-4 text-center">
                 About Us
                 </h1>
     
@@ -126,7 +144,7 @@
     <section class="max-w-4xl mx-auto py-6 my-6 border-b-2 border-gray-200">
         <div class="flex justify-center bg-gray-100 px-4 md:p-6">
             <div class="md:p-0 px-8 py-6">
-                <h1 class="font-bold md:text-5xl text-3xl text-center mb-4">Experience that makes a difference
+                <h1 class="impact md:text-5xl text-3xl text-center mb-4">Experience that makes a difference
                 </h1>
     
                 <p class="text-center">
@@ -140,7 +158,7 @@
     <section class="max-w-4xl mx-auto py-6 my-6 px-8 md:px-0">
         <div class="flex justify-center">
             <div>
-                <h1 class="font-bold md:text-5xl text-3xl text-center mb-4">Latest News
+                <h1 class="impact md:text-5xl text-3xl text-center mb-4">Latest News
                 </h1>
                 <p class="text-center">All of the latest news and invaluable information from the world of football.
                 </p>
@@ -182,28 +200,18 @@
                 <div class="py-1">​Contact us</div>
                 <div class="py-1">Sitemap</div>
             </div>
-
-            
-            <div class="flex justify-end items-end">
-                <div class="bg-transparent  border-white rounded-full p-2 mx-1 bg-gray-700 hover:bg-blue-500"><img src="./assets/images/facebook icon.svg" width="20px"></div>
-                <div class="bg-transparent  border-white rounded-full p-2 mx-1 bg-gray-700 hover:bg-blue-500"><img src="./assets/images/twitter icon.svg" width="20px"></div>
-                <div class="bg-transparent  border-white rounded-full p-2 mx-1 bg-gray-700 hover:bg-blue-500"><img src="./assets/images/instagram icon.svg" width="20px"></div>
-                <div class="bg-transparent  border-white rounded-full p-2 mx-1 bg-gray-700 hover:bg-blue-500"><img src="./assets/images/pinterest icon.svg" width="20px"></div>
-                <div class="bg-transparent  border-white rounded-full p-2 mx-1 bg-gray-700 hover:bg-blue-500"><img src="./assets/images/youtube icon.svg" width="20px"></div>
-                <div class="bg-transparent  border-white rounded-full p-2 mx-1 bg-gray-700 hover:bg-blue-500"><img src="./assets/images/linkedin icon.svg" width="20px"></div>
-            </div>
-
         </div>
-        <div class="py-2"></div>
 
+        <div class="flex justify-center my-4">
+            <div class="bg-transparent  border-white rounded-full w-8 p-2 mx-1 bg-gray-700 hover:bg-blue-500"><img src="./assets/images/facebook icon.svg" width="100%"></div>
+            <div class="bg-transparent  border-white rounded-full w-8 p-2 mx-1 bg-gray-700 hover:bg-blue-500"><img src="./assets/images/twitter icon.svg" ></div>
+            <div class="bg-transparent  border-white rounded-full w-8 p-2 mx-1 bg-gray-700 hover:bg-blue-500"><img src="./assets/images/instagram icon.svg" ></div>
+            <div class="bg-transparent  border-white rounded-full w-8 p-2 mx-1 bg-gray-700 hover:bg-blue-500"><img src="./assets/images/pinterest icon.svg" ></div>
+            <div class="bg-transparent  border-white rounded-full w-8 p-2 mx-1 bg-gray-700 hover:bg-blue-500"><img src="./assets/images/youtube icon.svg" ></div>
+            <div class="bg-transparent  border-white rounded-full w-8 p-2 mx-1 bg-gray-700 hover:bg-blue-500"><img src="./assets/images/linkedin icon.svg"></div>
+        </div>
 
-
-
-    </div>
-
-    <div class="py-2 bg-black"></div>
-    <div class="bg-black -mt-1">
-    <div class="text-white text-center py-4 px-8 md: px-0">Route One Sports Management © 2021</div>
+        <div class="text-white text-center pb-4">Route One Sports Management © 2021</div>
     </div>
 
 </body>
